@@ -1,0 +1,432 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    $LT-IE9
+\*------------------------------------*/
+/**
+ * Esta hoja de estilos elimina los mediaqueries si trabajamos mobile first 
+ * y crea una clase para ellos. La clase está en la variable $no-mq-classname.
+ */
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+/*------------------------------------*\
+    $CONTENIDO
+\*------------------------------------*/
+/**
+ * Contenido..................... Esto que lees
+
+ * Variables..................... Configuramos todas las variables del framework
+
+ * Mixins........................ Mixins de LESS
+
+ * Helpers....................... Clases de ayuda
+
+ * Reset......................... Reinicio de valores CSS
+
+ * Fuentes....................... Fuentes que vamos a importar
+
+ * Links......................... Formas y estilos de los links
+
+ * Tablas........................ Estilos de las tablas
+
+ * Botones....................... Estilos de Botones, skins y variantes
+
+ * Elementos..................... Elementos varios como Imagen, HR, etc...
+
+ * Tipografía.................... Encabezados, small, párrafos, listas, etc...
+
+ * Navegación.................... Una navegación, por si quieres usar esta y no la tuya propia
+
+ * Formularios................... Estilos de todos los elementos de formularios y sus variantes
+
+ * Sitio......................... Aquí escribes tus estilos para la web se vea como tu quieres ;)
+
+ * Paginación.................... Estilos básicos para las paginaciones
+
+ * Texturas...................... Badges, cajas y wells
+
+ * Breakpoints................... Importamos breakpoints basados en las variables @bp$
+
+ * Patron........................ Estilos para la guía de patrones
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ *
+ * Definimos y configuramos las variables CSS que vamos a utilizar
+ *
+ */
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ */
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Quieres todos los elementos tener un box-sizing:border-box?
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+    $no-mediaquery-class
+\*------------------------------------*/
+/**
+ * Si decides incluir lt-ie9 para dar soporte a navegadores sin estilos
+ * esta es la clase que se añadirá a todos los elementos.
+ */
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+/**
+ * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ */
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * Escala de grises
+ * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
+ */
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $PLACEHOLDERS
+\*------------------------------------*/
+/**
+* Centrar y dar un ancho máximo igual a $pagemaxwidth.
+*/
+/**
+* The ghost, nudged to maintain perfect centering
+*/
+/**
+* Escondemos el texto solo VISUALMENTE
+*/
+/**
+* Escondemos el texto de VISUALMENTE y SCREENREADERS
+*/
+/**
+* Escondemos pero mantenemos layout.
+*/
+/**
+* Visualmente escondido, pero se puede detectar con teclado (focus).
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible; }
+
+/**
+* Clear floats.
+* http://bit.ly/1e3YaBH
+*/
+/**
+* Gradientes los convertimos en placeholders porque imprime 10 millones de
+* líneas inútiles en el CSS
+*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+/**
+* Ningún padding jodiendo la marrana.
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*------------------------------------*\
+    $FUENTES
+\*------------------------------------*/
+@font-face {
+  font-family: 'AvenirLTStd85Heavy';
+  src: url("../fonts/avenirltstd-heavy.eot");
+  src: url("../fonts/avenirltstd-heavy.eot") format("embedded-opentype"), url("../fonts/avenirltstd-heavy.woff2") format("woff2"), url("../fonts/avenirltstd-heavy.woff") format("woff"), url("../fonts/avenirltstd-heavy.ttf") format("truetype"), url("../fonts/avenirltstd-heavy.svg#AvenirLTStd85Heavy") format("svg"); }
+/*
+ * Por defecto incluyo una fuente de icomoon (http://icomoon.io/)
+ * con 5 iconos que se encuentra en la carpeta /../fonts.
+ * Ve y adàptalos a tu web.
+ */
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+h1 {
+  margin: 0;
+  font-family: "AvenirLTStd85Heavy";
+  font-weight: bold;
+  color: white;
+  text-rendering: optimizelegibility; }
+  h1.altheader {
+    color: gray;
+    text-transform: uppercase; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "AvenirLTStd85Heavy"; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-weight: normal;
+  display: block;
+  color: gray; }
+
+h1,
+.h1 {
+  margin-bottom: 0.75em;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.2; }
+
+h2,
+.h2 {
+  margin-bottom: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.2; }
+
+h3,
+.h3 {
+  margin-bottom: 0.375em;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.3; }
+
+h4,
+.h4 {
+  margin-bottom: 0.25em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.25; }
+
+h5,
+.h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 0.25em; }
+
+h6,
+.h6 {
+  margin-bottom: 0.25em;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  line-height: 1.5em; }
+
+.intro {
+  font-weight: bold; }
+
+small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: gray; }
+
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 24px; }
+
+li ul,
+li ol {
+  margin: 0; }
+
+blockquote {
+  margin: 0 0 1.5em 0;
+  padding-left: 24px;
+  border-left: 2px solid white;
+  font-family: Arial;
+  font-style: normal; }
+  blockquote p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: gray;
+    font-style: italic; }
+
+q {
+  quotes: none;
+  font-style: italic; }
+
+blockquote p::before,
+blockquote p::after,
+q:before,
+q:after {
+  content: ""; }
+
+cite {
+  font-style: normal; }
+
+dl,
+dd {
+  margin-bottom: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right; }
+.dl-horizontal dd {
+  margin-left: 22.78%; }
+
+abbr[title] {
+  border-bottom: 1px dotted white;
+  cursor: help; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: white;
+  color: #262626;
+  text-decoration: none; }
+
+mark {
+  background-color: yellow;
+  color: #262626; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 0;
+  vertical-align: 1.5em; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+html {
+  font-size: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: url("../images/fondo-web-tutela.jpg");
+  font-family: Georgia, Times, "Times New Roman";
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: white; }
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px; }

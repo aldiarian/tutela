@@ -1,0 +1,143 @@
+
+
+
+
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+
+
+@-webkit-viewport {
+	width : device-width;
+}
+
+@-moz-viewport {
+	width : device-width;
+}
+
+@-ms-viewport {
+	width : device-width;
+}
+
+@-o-viewport {
+	width : device-width;
+}
+
+@viewport {
+	width : device-width;
+}
+
+
+html {
+	// background : $background;
+	font-size : 100%;
+	-webkit-overflow-scrolling : touch;
+	-webkit-tap-highlight-color : lighten($basecolor, 75%);
+	-webkit-text-size-adjust : 100%;
+	-ms-text-size-adjust : 100%;
+}
+
+body {
+	margin : 0;
+	padding : 0;
+	width : 100%;
+	background:white;
+	font-family : $basefont;
+	@include font-size();
+	line-height : $baselineheight;
+	color : $azultutela;
+}
+
+
+
+h1{
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+
+
+a{
+	text-decoration: none;
+	color:inherit;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+ul{
+	padding:0;
+	li{
+		text-decoration: none;
+		list-style: none;
+	}
+}
+
+.contenedor1{
+	max-width: 1200px;
+	margin:0 auto;
+}
+.contenedor2{
+	max-width: 960px;
+	margin:0 auto;
+}
+
+
+
+.titularseccion{
+	background-color: $lightergrey ;
+	h3{
+		line-height: 4em;
+	}
+}
+.titular{
+	font-family: $baseheadingfont;
+	font-style: normal;
+	text-transform: uppercase;
+	margin-bottom: 0;
+	letter-spacing: 0.1em;
+	text-align: center;
+}
+
+.active a{
+	border-bottom: 3px solid $color-tutela;
+}
+.activa{
+	border-bottom: 3px solid $color-tutela;
+}
+
+.btn{
+	font-family: $basefont;
+	background:grey;
+	border:1px solid grey;
+	@include font-size(15);
+	color:white;
+	padding:0.5em 1em;
+	&:hover{
+		@include opacity();
+		cursor: pointer;
+	}
+}
+
+
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/	
+
+footer{
+	background-color: $color-tutela;
+	font-weight: lighter;
+	@include font-size(12);
+	text-align: center;
+	padding:2em 0;
+	img{
+		max-width: 250px;
+		display: table;
+		margin:0 auto;
+		padding-bottom: 1em;
+		&:hover{
+			@include opacity();
+		}
+	}
+}

@@ -1,0 +1,78 @@
+.inicio-pericial{
+	background-image: url(../images/foto-pericial.jpg);
+}
+
+.pericial{
+	background:$lightergrey;
+}
+.menu-pericial{
+	padding:4em 2em;
+	font-family: $baseheadingfont2;
+	text-transform: uppercase;
+	@include font-size(14);
+	letter-spacing: 1.5px;
+	text-align: center;
+	li{
+		padding: 0.5em 0;
+		&:hover{
+			background:white;
+			font-family: $baseheadingfont;
+		}
+		a{
+			text-decoration: none;
+		}
+	}
+}
+.pericial-selec{
+	background: white;
+	font-family: $baseheadingfont;
+}
+
+
+
+.seleccionado{
+	padding:0 2em;
+}
+#contenedor-titular{
+	position: relative;
+}
+.titular-selec{
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+
+}
+.titular-selec:after {
+	content: "";
+	display: block;
+	border-top: solid 1px $lightgrey ;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 0px;
+	z-index: 1;
+}
+.titular-selec span{
+	font-style: normal;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	@include font-size(15);
+	border: 2px solid black;
+	font-family: $baseheadingfont;
+	background-color: white;
+	margin:0;
+	padding:0.5em 2em;
+	display: inline-block;
+	position: relative;
+	z-index: 5;
+}
+
+.contenedor-texto{
+	text-indent: 1em;
+	max-width: 685px;
+	display: table;
+	margin: 0 auto;
+	padding:2em 0;
+	padding-bottom: 0;
+}

@@ -1,0 +1,824 @@
+@charset "UTF-8";
+/*------------------------------------*\
+    $STYLE
+\*------------------------------------*/
+/**
+ * Aquí incluímos todos los módulos (archivos .scss) que se van
+ * a compilar en el CSS definitivo: /css/style.css.
+ * Si no usas algún módulo, es recomendable que elimines
+ * o comentes su inclusión para no tener estilos innecesarios en tu CSS final
+ * y optimizar lo máximo posible.
+ */
+/*------------------------------------*\
+    $CONTENIDO
+\*------------------------------------*/
+/**
+ * Contenido..................... Esto que lees
+
+ * Variables..................... Configuramos todas las variables del framework
+
+ * Mixins........................ Mixins de LESS
+
+ * Helpers....................... Clases de ayuda
+
+ * Reset......................... Reinicio de valores CSS
+
+ * Fuentes....................... Fuentes que vamos a importar
+
+ * Links......................... Formas y estilos de los links
+
+ * Tablas........................ Estilos de las tablas
+
+ * Botones....................... Estilos de Botones, skins y variantes
+
+ * Elementos..................... Elementos varios como Imagen, HR, etc...
+
+ * Tipografía.................... Encabezados, small, párrafos, listas, etc...
+
+ * Navegación.................... Una navegación, por si quieres usar esta y no la tuya propia
+
+ * Formularios................... Estilos de todos los elementos de formularios y sus variantes
+
+ * Sitio......................... Aquí escribes tus estilos para la web se vea como tu quieres ;)
+
+ * Paginación.................... Estilos básicos para las paginaciones
+
+ * Texturas...................... Badges, cajas y wells
+
+ * Breakpoints................... Importamos breakpoints basados en las variables @bp$
+
+ * Patron........................ Estilos para la guía de patrones
+ */
+/*------------------------------------*\
+    $VARIABLES
+\*------------------------------------*/
+/**
+ *
+ * Definimos y configuramos las variables CSS que vamos a utilizar
+ *
+ */
+/*------------------------------------*\
+    $BREAKPOINTS
+\*------------------------------------*/
+/**
+ * "Start with the small screen first, then expand until it looks like shit. Time to insert a breakpoint!"
+ */
+/*------------------------------------*\
+    $BORDER-BOX
+\*------------------------------------*/
+/**
+ * Quieres todos los elementos tener un box-sizing:border-box?
+ * paulirish.com/2012/box-sizing-border-box-ftw ?
+ */
+/*------------------------------------*\
+    $CONTENEDORES
+\*------------------------------------*/
+/*------------------------------------*\
+    $no-mediaquery-class
+\*------------------------------------*/
+/**
+ * Si decides incluir lt-ie9 para dar soporte a navegadores sin estilos
+ * esta es la clase que se añadirá a todos los elementos.
+ */
+/*------------------------------------*\
+    $IMAGE-DIR
+\*------------------------------------*/
+/**
+ * Con agregar esta variable a las imágenes declaradas en CSS apañamos:
+ */
+/*------------------------------------*\
+    $LAYOUT
+\*------------------------------------*/
+/**
+ * Definimos elementos constantes del layout
+ */
+/*------------------------------------*\
+    $FONT-FACE
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $TAMAÑOS
+\*------------------------------------*/
+/**
+ * Definimos las fuentes a utilizar:
+ * $basefont para todos los textos inline
+ * $altfont para textos alternativos, como citas, intro, etc...
+ * $codefont para código
+ */
+/*------------------------------------*\
+    $COLORS
+\*------------------------------------*/
+/**
+ * Brand stuff
+ */
+/**
+ * Escala de grises
+ * A veces no queremos que el negro sea "negro" o el blanco "blanco", puedes cambiarlos.
+ */
+/*------------------------------------*\
+    $TEXTURAS
+\*------------------------------------*/
+/**
+ * Definimos Colores y elementos de popups, mensajes de alerta, etc...
+ */
+/* Colores sociales -> son los colores corporativos, pero cambiadlos
+ * si hace falta. (también podéis añadir más)  ///////////////////////
+ */
+/*------------------------------------*\
+    $MIXINS
+\*------------------------------------*/
+/*------------------------------------*\
+    $PLACEHOLDERS
+\*------------------------------------*/
+/**
+* Centrar y dar un ancho máximo igual a $pagemaxwidth.
+*/
+/**
+* The ghost, nudged to maintain perfect centering
+*/
+/**
+* Escondemos el texto solo VISUALMENTE
+*/
+/**
+* Escondemos el texto de VISUALMENTE y SCREENREADERS
+*/
+/**
+* Escondemos pero mantenemos layout.
+*/
+/**
+* Visualmente escondido, pero se puede detectar con teclado (focus).
+*/
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  margin: 0;
+  overflow: visible; }
+
+/**
+* Clear floats.
+* http://bit.ly/1e3YaBH
+*/
+/**
+* Gradientes los convertimos en placeholders porque imprime 10 millones de
+* líneas inútiles en el CSS
+*/
+/*------------------------------------*\
+    $RESET
+\*------------------------------------*/
+html, body, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+article, aside, figure, footer, header, hgroup, nav, section {
+  display: block; }
+
+/**
+* Ningún padding jodiendo la marrana.
+*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*------------------------------------*\
+    $FUENTES
+\*------------------------------------*/
+@font-face {
+  font-family: 'AvenirLTStd85Heavy';
+  src: url("../fonts/avenirltstd-heavy.eot");
+  src: url("../fonts/avenirltstd-heavy.eot") format("embedded-opentype"), url("../fonts/avenirltstd-heavy.woff2") format("woff2"), url("../fonts/avenirltstd-heavy.woff") format("woff"), url("../fonts/avenirltstd-heavy.ttf") format("truetype"), url("../fonts/avenirltstd-heavy.svg#AvenirLTStd85Heavy") format("svg"); }
+@font-face {
+  font-family: 'AvenirLTStd35Light';
+  src: url("../fonts/avenirltstd-light.eot");
+  src: url("../fonts/avenirltstd-light.eot") format("embedded-opentype"), url("../fonts/avenirltstd-light.woff2") format("woff2"), url("../fonts/avenirltstd-light.woff") format("woff"), url("../fonts/avenirltstd-light.ttf") format("truetype"), url("../fonts/avenirltstd-light.svg#AvenirLTStd35Light") format("svg"); }
+/*
+ * Por defecto incluyo una fuente de icomoon (http://icomoon.io/)
+ * con 5 iconos que se encuentra en la carpeta /../fonts.
+ * Ve y adàptalos a tu web.
+ */
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+/*------------------------------------*\
+    $TIPOGRAFÍA
+\*------------------------------------*/
+h1 {
+  margin: 0;
+  font-family: "AvenirLTStd85Heavy";
+  color: white;
+  text-rendering: optimizelegibility; }
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, Times, "Times New Roman";
+  font-style: italic;
+  text-rendering: optimizelegibility; }
+
+h1 small,
+h2 small,
+h3 small {
+  font-weight: normal;
+  display: block;
+  color: gray; }
+
+h1,
+.h1 {
+  margin-bottom: 0.75em;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.2; }
+
+h2,
+.h2 {
+  margin-bottom: 0.5em;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.2; }
+
+h3,
+.h3 {
+  margin-bottom: 0.375em;
+  font-size: 21px;
+  font-size: 1.3125rem;
+  line-height: 1.3; }
+
+h4,
+.h4 {
+  margin-bottom: 0.25em;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.25; }
+
+h5,
+.h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 0.25em; }
+
+h6,
+.h6 {
+  margin-bottom: 0.25em;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+p,
+ol,
+ul,
+dl,
+address {
+  margin-bottom: 1.5em;
+  line-height: 1.5em; }
+
+.intro {
+  font-weight: bold; }
+
+small {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: gray; }
+
+ul,
+ol {
+  margin: 0 0 1.5em 0;
+  padding: 0 0 0 24px; }
+
+li ul,
+li ol {
+  margin: 0; }
+
+blockquote {
+  margin: 0 0 1.5em 0;
+  padding-left: 24px;
+  border-left: 2px solid white;
+  font-family: Arial;
+  font-style: normal; }
+  blockquote p {
+    font-size: 18px;
+    font-size: 1.125rem;
+    color: gray;
+    font-style: italic; }
+
+q {
+  quotes: none;
+  font-style: italic; }
+
+blockquote p::before,
+blockquote p::after,
+q:before,
+q:after {
+  content: ""; }
+
+cite {
+  font-style: normal; }
+
+dl,
+dd {
+  margin-bottom: 1.5em; }
+
+dt {
+  font-weight: bold; }
+
+.dl-horizontal dt {
+  float: left;
+  clear: left;
+  width: 20.25%;
+  text-align: right; }
+.dl-horizontal dd {
+  margin-left: 22.78%; }
+
+abbr[title] {
+  border-bottom: 1px dotted white;
+  cursor: help; }
+
+b, strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+ins {
+  background-color: white;
+  color: #262626;
+  text-decoration: none; }
+
+mark {
+  background-color: yellow;
+  color: #262626; }
+
+pre,
+code,
+kbd,
+samp {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+sub,
+sup {
+  position: relative;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 0;
+  vertical-align: 1.5em; }
+
+sup {
+  top: -.5em; }
+
+sub {
+  bottom: -.25em; }
+
+/*------------------------------------*\
+    $SITIO
+\*------------------------------------*/
+@-webkit-viewport {
+  width: device-width; }
+@-moz-viewport {
+  width: device-width; }
+@-ms-viewport {
+  width: device-width; }
+@-o-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+html {
+  font-size: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: white;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: white;
+  font-family: Georgia, Times, "Times New Roman";
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #17202b; }
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 5px; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+  a:hover {
+    text-decoration: underline; }
+
+ul {
+  padding: 0; }
+  ul li {
+    text-decoration: none;
+    list-style: none; }
+
+.contenedor1 {
+  max-width: 1200px;
+  margin: 0 auto; }
+
+.contenedor2 {
+  max-width: 960px;
+  margin: 0 auto; }
+
+.titularseccion {
+  background-color: #e6e6e6; }
+  .titularseccion h3 {
+    line-height: 4em; }
+
+.titular {
+  font-family: "AvenirLTStd85Heavy";
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  text-align: center; }
+
+.active a {
+  border-bottom: 3px solid #bdaa75; }
+
+.activa {
+  border-bottom: 3px solid #bdaa75; }
+
+.btn {
+  font-family: Georgia, Times, "Times New Roman";
+  background: grey;
+  border: 1px solid grey;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: white;
+  padding: 0.5em 1em; }
+  .btn:hover {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    cursor: pointer; }
+
+/*------------------------------------*\
+	$FOOTER
+\*------------------------------------*/
+footer {
+  background-color: #bdaa75;
+  font-weight: lighter;
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 2em 0; }
+  footer img {
+    max-width: 250px;
+    display: table;
+    margin: 0 auto;
+    padding-bottom: 1em; }
+    footer img:hover {
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      opacity: 0.5; }
+
+.cabecera {
+  background-image: url(../images/fondo-web-tutela.jpg); }
+
+.logotutela {
+  padding: 1em;
+  display: block;
+  padding: 4em 1em;
+  max-width: 430px;
+  margin: 0 auto; }
+  .logotutela:hover {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5; }
+
+/*------------------------------------*\
+	$CABECERA
+\*------------------------------------*/
+.cajamenu {
+  background: #17202b;
+  border-top: 1px dotted #4c6a8f;
+  border-bottom: 1px dotted #4c6a8f; }
+
+.menuprincipal {
+  color: white;
+  margin: 0 auto; }
+  .menuprincipal a {
+    text-decoration: none;
+    text-align: center;
+    padding-left: 5px; }
+  .menuprincipal p {
+    display: inline-block;
+    margin-bottom: 0; }
+  @media only screen and (min-width: 48em) {
+    .menuprincipal {
+      width: 90%;
+      max-width: 800px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .menuprincipal > li {
+        width: 20%;
+        position: relative; }
+      .menuprincipal .servicios ul {
+        display: none; }
+      .menuprincipal .servicios p {
+        margin: 0;
+        padding: 0;
+        display: inline-block; }
+      .menuprincipal .servicios:hover ul {
+        display: block;
+        background-color: white;
+        z-index: 999;
+        position: absolute;
+        width: 100%; }
+        .menuprincipal .servicios:hover ul li {
+          margin: 1em 10px; }
+          .menuprincipal .servicios:hover ul li:hover {
+            text-decoration: underline; } }
+  .menuprincipal li {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -ms-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "AvenirLTStd85Heavy";
+    letter-spacing: 3px;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+    font-size: 0.875rem; }
+    .menuprincipal li:hover {
+      background: white;
+      color: #17202b; }
+  .menuprincipal li:last-of-type {
+    border-bottom: none; }
+  .menuprincipal > li {
+    padding: 1em 0; }
+  .menuprincipal ul > li {
+    padding: 5px 0;
+    font-size: 12px;
+    font-size: 0.75rem;
+    border-bottom: none;
+    font-family: "AvenirLTStd35Light"; }
+  .menuprincipal ul li:first-of-type {
+    padding-top: 10px; }
+
+.fotoinicio {
+  height: 400px;
+  background: url("../images/foto-inicio.jpg") no-repeat;
+  background-size: cover;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .fotoinicio .textos {
+    padding: 0 3em; }
+  .fotoinicio h1 {
+    display: table;
+    margin: 0 auto;
+    border-bottom: 3px solid white;
+    font-size: 29px;
+    font-size: 1.8125rem; }
+  .fotoinicio h2 {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 200;
+    margin-top: 10px;
+    font-weight: lighter;
+    margin-bottom: 0; }
+
+.textointro {
+  background: #e6e6e6;
+  color: #17202b;
+  padding: 2em 2em;
+  margin-bottom: 4em; }
+  .textointro h3 {
+    text-align: center;
+    font-weight: lighter;
+    max-width: 564px;
+    display: table;
+    margin: 0 auto;
+    font-variant: normal; }
+
+.secciones {
+  margin-bottom: 4em; }
+  .secciones a {
+    max-width: 450px;
+    display: table;
+    margin: 2em auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; }
+    .secciones a:hover {
+      text-decoration: none;
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      opacity: 0.5; }
+  .secciones .seccion-imagen {
+    height: 120px;
+    width: 120px;
+    overflow: hidden;
+    border: 1px solid #bdaa75;
+    -webkit-border-top-right-radius: 100px;
+    -webkit-border-bottom-right-radius: 100px;
+    -webkit-border-bottom-left-radius: 100px;
+    -webkit-border-top-left-radius: 100px;
+    -moz-border-radius-topright: 100px;
+    -moz-border-radius-bottomright: 100px;
+    -moz-border-radius-bottomleft: 100px;
+    -moz-border-radius-topleft: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-top-left-radius: 100px;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    margin-right: 1em; }
+    .secciones .seccion-imagen img {
+      height: 100%; }
+  .secciones .seccion-texto {
+    width: 50%; }
+    .secciones .seccion-texto h5 {
+      border-bottom: 1px solid #bdaa75;
+      padding-top: 5px;
+      font-weight: lighter;
+      font-style: italic; }
+    .secciones .seccion-texto p {
+      font-size: 14px;
+      font-size: 0.875rem; }
+  @media only screen and (min-width: 48em) {
+    .secciones {
+      display: flex;
+      flex-wrap: wrap; }
+      .secciones article {
+        width: 50%; } }
+
+.servicios article[class*="servicios-"] {
+  height: 360px;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .servicios article[class*="servicios-"] a {
+    text-decoration: none; }
+  .servicios article[class*="servicios-"] .serv-textos {
+    max-width: 700px;
+    text-align: center;
+    padding: 0 2em; }
+    .servicios article[class*="servicios-"] .serv-textos p {
+      font-style: italic; }
+    .servicios article[class*="servicios-"] .serv-textos:hover {
+      -webkit-opacity: 0.5;
+      -moz-opacity: 0.5;
+      opacity: 0.5; }
+
+.servicios-pericial {
+  background-image: url("../images/foto-pericial.jpg"); }
+
+.servicios-segunda {
+  background-image: url("../images/foto-segunda.jpg"); }
+
+.noticias-section {
+  padding: 4em 0; }
+  @media only screen and (min-width: 48em) {
+    .noticias-section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; } }
+
+@media only screen and (min-width: 48em) {
+  .noticiapq {
+    width: 50%;
+    margin-bottom: 2em; } }
+
+.noticiapq a {
+  margin: 0 auto;
+  max-width: 450px;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .noticiapq a .imagen {
+    width: 45%;
+    margin-right: 1em;
+    overflow: hidden;
+    margin-top: 11px; }
+    .noticiapq a .imagen img {
+      width: 100%;
+      margin-right: 0.5em; }
+  .noticiapq a .texto-notipq {
+    width: 50%; }
+    .noticiapq a .texto-notipq h5 {
+      border-bottom: 1px solid #bdaa75;
+      padding-top: 12px;
+      font-weight: lighter;
+      font-style: italic; }
+    .noticiapq a .texto-notipq p {
+      font-size: 14px;
+      font-size: 0.875rem; }
+  .noticiapq a:hover {
+    -webkit-opacity: 0.5;
+    -moz-opacity: 0.5;
+    opacity: 0.5;
+    text-decoration: none; }
+
+.inicio-pericial {
+  background-image: url(../images/foto-pericial.jpg); }
+
+.pericial {
+  background: #e6e6e6; }
+
+.menu-pericial {
+  padding: 4em 2em;
+  font-family: "AvenirLTStd35Light";
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+  letter-spacing: 1.5px;
+  text-align: center; }
+  .menu-pericial li {
+    padding: 0.5em 0; }
+    .menu-pericial li:hover {
+      background: white;
+      font-family: "AvenirLTStd85Heavy"; }
+    .menu-pericial li a {
+      text-decoration: none; }
+
+.pericial-selec {
+  background: white;
+  font-family: "AvenirLTStd85Heavy"; }
+
+.seleccionado {
+  padding: 0 2em; }
+
+#contenedor-titular {
+  position: relative; }
+
+.titular-selec {
+  display: table;
+  margin: 0 auto;
+  text-align: center; }
+
+.titular-selec:after {
+  content: "";
+  display: block;
+  border-top: solid 1px #bfbfbf;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  z-index: 1; }
+
+.titular-selec span {
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-size: 0.9375rem;
+  border: 2px solid black;
+  font-family: "AvenirLTStd85Heavy";
+  background-color: white;
+  margin: 0;
+  padding: 0.5em 2em;
+  display: inline-block;
+  position: relative;
+  z-index: 5; }
+
+.contenedor-texto {
+  text-indent: 1em;
+  max-width: 685px;
+  display: table;
+  margin: 0 auto;
+  padding: 2em 0;
+  padding-bottom: 0; }

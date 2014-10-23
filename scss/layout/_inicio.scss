@@ -1,0 +1,285 @@
+.cabecera{
+	background-image: url(../images/fondo-web-tutela.jpg);
+}
+.logotutela{
+	padding:1em;
+	display: block;
+	padding:4em 1em;
+	max-width: 430px;
+	margin: 0 auto;
+	&:hover{
+		@include opacity();
+	}
+}
+
+
+
+
+/*------------------------------------*\
+	$CABECERA
+\*------------------------------------*/
+
+.cajamenu{
+
+	background: $azultutela;
+	border-top:1px dotted $azultutela-claro;
+	border-bottom:1px dotted $azultutela-claro;
+}
+.menuprincipal{
+	color:white;
+	margin:0 auto;
+	a{
+		text-decoration: none;
+		text-align: center;
+							padding-left: 5px
+	}
+	p{
+		display: inline-block;
+		margin-bottom: 0;
+	}
+	@media only screen and (min-width : $bp3){
+		width: 90%;
+		max-width: 800px;
+		display: flex;
+		flex-direction: row ;
+		justify-content:space-between;
+		&>li{
+			width: 20%;
+			position: relative;
+		}
+		.servicios {
+			ul{
+				display: none;
+			}
+			p{
+				margin:0;
+				padding: 0;
+				display: inline-block;
+			}
+		&:hover{
+			ul{
+				display: block;
+				background-color: white;
+				z-index: 999;
+				position: absolute;
+				width: 100%;
+				li{
+					margin:1em 10px;
+					&:hover{
+					text-decoration: underline;
+					}
+				}
+			}
+		}
+		
+		}
+
+	}
+	li{
+		@include transition(0.2s);
+		text-align: center;
+		text-transform: uppercase;
+		font-family: $baseheadingfont;
+		letter-spacing: 3px;
+		border-bottom: 1px solid black;
+		@include font-size(14);
+		&:hover{
+			background: white;
+			color:$azultutela;
+		}
+	}
+	li:last-of-type{
+		border-bottom: none;
+	}
+	&>li{
+		padding: 1em 0;
+	}
+	ul>li{
+		padding: 5px 0;
+		@include font-size(12);
+		border-bottom: none;
+		font-family: $baseheadingfont2;
+	}
+	ul li:first-of-type{
+		padding-top:10px;
+	}
+	
+	
+}
+
+
+.fotoinicio{
+	height: 400px;
+	background: url('../images/foto-inicio.jpg') no-repeat;
+	background-size: cover;
+	text-align: center;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	.textos{
+		padding:0 3em;
+	}
+	h1{
+		display: table;
+		margin:0 auto;
+		border-bottom:3px solid white;
+		@include font-size(29);
+	}
+	h2{
+		color:white;
+		letter-spacing: 1px;
+		font-weight: 200;
+		margin-top: 10px;
+		font-weight: lighter;
+		margin-bottom: 0;
+	}
+
+	
+}
+.textointro{
+	background:$lightergrey;
+	color:$azultutela;
+	padding:2em 2em;
+	margin-bottom:4em; 
+	h3{
+		text-align: center;
+		font-weight: lighter;
+		max-width: 564px;
+		display: table;
+		margin:0 auto;
+		font-variant: normal;
+		
+	}
+}
+
+.secciones{
+	margin-bottom: 4em;
+	a{
+		max-width: 450px;
+		display: table;
+		margin:2em auto;
+		display: flex;
+		flex-direction:row;
+		flex-wrap:wrap;
+		align-items:center;
+		justify-content:center;
+		&:hover{
+			text-decoration: none;
+			@include opacity();
+		}
+	}
+	.seccion-imagen{
+		height: 120px;
+		width: 120px;
+		overflow: hidden;
+		border: 1px solid $color-tutela;
+		@include border-radius(100px,100px,100px,100px);
+		// float: left;
+		margin-right: 1em;
+		img{
+			height: 100%;
+		}
+	}
+	.seccion-texto{
+		width: 50%;
+		h5{
+			border-bottom:1px solid $color-tutela;
+			padding-top: 5px;
+			font-weight: lighter;
+			font-style: italic;
+		}
+		p{
+			@include font-size(14);
+
+		}
+	}
+
+	@media only screen and (min-width : $bp3){
+		display: flex;
+		flex-wrap:wrap;
+		article{
+			width: 50%;
+		}
+	}
+}
+
+.servicios article[class*="servicios-"]{
+	height: 360px;
+	background-size: cover;
+	color:white;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	a{text-decoration: none;}
+	.serv-textos{
+		max-width: 700px;
+		text-align: center;
+		padding:0 2em;
+		p{
+			font-style: italic;
+		}
+		&:hover{
+			@include opacity();
+		}
+	}
+}
+.servicios-pericial{
+	background-image: url('../images/foto-pericial.jpg');
+}
+.servicios-segunda{
+	background-image: url('../images/foto-segunda.jpg');
+
+}
+
+.noticias-section{
+	padding: 4em 0;
+		@media only screen and (min-width : $bp3){
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+}
+
+.noticiapq{
+	@media only screen and (min-width : $bp3){
+		width: 50%;
+		margin-bottom: 2em;
+	}
+	
+}
+.noticiapq a {
+	margin:0 auto;
+	max-width: 450px;
+	padding:0 1em;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	.imagen{
+		width: 45%;
+		margin-right: 1em;
+		overflow: hidden;
+		margin-top: 11px;
+		img{
+			width: 100%;
+			margin-right: 0.5em;
+		}
+	}
+	.texto-notipq{
+		width: 50%;
+		h5{
+			border-bottom:1px solid $color-tutela;
+			padding-top: 12px;
+			font-weight: lighter;
+			font-style: italic;
+		}
+		p{
+			@include font-size(14);
+
+		}
+	}
+	&:hover{
+		@include opacity();
+		text-decoration: none;
+	}
+
+}
