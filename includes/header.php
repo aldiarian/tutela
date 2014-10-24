@@ -17,6 +17,9 @@
 <!-- CSS Para todos los navegadores -->
 <link rel="stylesheet" href="css/style.css">
 
+<!-- animate.css -->
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+
 <!--[if (lt IE 9) & (!IEMobile)]>
 <script src="js/vendor/selectivizr-min.js"></script>
 <![endif]-->

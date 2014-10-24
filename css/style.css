@@ -17,7 +17,7 @@
 
  * Variables..................... Configuramos todas las variables del framework
 
- * Mixins........................ Mixins de LESS
+ * Mixins........................ Mixins de SCSS
 
  * Helpers....................... Clases de ayuda
 
@@ -475,7 +475,8 @@ ul {
   font-size: 15px;
   font-size: 0.9375rem;
   color: white;
-  padding: 0.5em 1em; }
+  padding: 0.5em 1em;
+  display: table; }
   .btn:hover {
     -webkit-opacity: 0.5;
     -moz-opacity: 0.5;
@@ -696,7 +697,9 @@ footer {
     text-align: center;
     padding: 0 2em; }
     .servicios article[class*="servicios-"] .serv-textos p {
-      font-style: italic; }
+      font-style: italic;
+      font-size: 18px;
+      font-size: 1.125rem; }
     .servicios article[class*="servicios-"] .serv-textos:hover {
       -webkit-opacity: 0.5;
       -moz-opacity: 0.5;
@@ -707,6 +710,9 @@ footer {
 
 .servicios-segunda {
   background-image: url("../images/foto-segunda.jpg"); }
+
+.servicios-med-clinica {
+  background-image: url("../images/foto-med-clinica.jpg"); }
 
 .noticias-section {
   padding: 4em 0; }
@@ -755,10 +761,13 @@ footer {
 .inicio-pericial {
   background-image: url(../images/foto-pericial.jpg); }
 
+.inicio-med-clinica {
+  background-image: url(../images/foto-med-clinica.jpg); }
+
 .pericial {
   background: #e6e6e6; }
 
-.menu-pericial {
+.menu-servicio {
   padding: 4em 2em;
   font-family: "AvenirLTStd35Light";
   text-transform: uppercase;
@@ -766,20 +775,20 @@ footer {
   font-size: 0.875rem;
   letter-spacing: 1.5px;
   text-align: center; }
-  .menu-pericial li {
+  .menu-servicio li {
     padding: 0.5em 0; }
-    .menu-pericial li:hover {
+    .menu-servicio li:hover {
       background: white;
       font-family: "AvenirLTStd85Heavy"; }
-    .menu-pericial li a {
+    .menu-servicio li a {
       text-decoration: none; }
 
-.pericial-selec {
+.servicio-selec {
   background: white;
   font-family: "AvenirLTStd85Heavy"; }
 
-.seleccionado {
-  padding: 0 2em; }
+.servicio-seleccionado {
+  padding: 0 2em 4em 2em; }
 
 #contenedor-titular {
   position: relative; }
@@ -816,9 +825,32 @@ footer {
   z-index: 5; }
 
 .contenedor-texto {
-  text-indent: 1em;
   max-width: 685px;
   display: table;
   margin: 0 auto;
   padding: 2em 0;
   padding-bottom: 0; }
+  .contenedor-texto .btn {
+    margin: 0 auto; }
+  .contenedor-texto p + p {
+    text-indent: 1.5em; }
+  .contenedor-texto ul li {
+    margin-left: 1em;
+    position: relative;
+    margin-bottom: 0.5em; }
+    .contenedor-texto ul li:before {
+      content: url("../images/arrow/arrow-right1.svg");
+      position: absolute;
+      left: -18px;
+      top: 2px;
+      width: 12px; }
+  .contenedor-texto ul > ul {
+    margin: 1em 0 1.5em 1em; }
+    .contenedor-texto ul > ul li:before {
+      content: url("../images/arrow/arrow-right2.svg");
+      position: absolute;
+      left: -1.3em;
+      top: 2px;
+      width: 12px; }
+  .contenedor-texto h4 {
+    margin-bottom: 1em; }

@@ -2,10 +2,15 @@
 	background-image: url(../images/foto-pericial.jpg);
 }
 
+.inicio-med-clinica{
+	background-image: url(../images/foto-med-clinica.jpg);
+}
+
+
 .pericial{
 	background:$lightergrey;
 }
-.menu-pericial{
+.menu-servicio{
 	padding:4em 2em;
 	font-family: $baseheadingfont2;
 	text-transform: uppercase;
@@ -23,15 +28,15 @@
 		}
 	}
 }
-.pericial-selec{
+.servicio-selec{
 	background: white;
 	font-family: $baseheadingfont;
 }
 
 
 
-.seleccionado{
-	padding:0 2em;
+.servicio-seleccionado{
+	padding:0 2em 4em 2em;
 }
 #contenedor-titular{
 	position: relative;
@@ -69,10 +74,51 @@
 }
 
 .contenedor-texto{
-	text-indent: 1em;
 	max-width: 685px;
 	display: table;
 	margin: 0 auto;
 	padding:2em 0;
 	padding-bottom: 0;
+	.btn{
+		margin:0 auto;
+	}
+	// p:first-child:first-letter{
+	// 	float: left;
+	//     font-size: 5em;
+	//     line-height: 0.5em;
+	//     padding-bottom: 0.05em;
+	//     padding-top: 0.2em;
+	// }
+	p+p{
+		text-indent: 1.5em;
+	}
+	ul li{
+		margin-left: 1em;
+		position: relative;
+		margin-bottom: 0.5em;
+		// list-style: inherit;
+		&:before{
+			content: url('../images/arrow/arrow-right1.svg');
+			position: absolute;
+			left: -18px;
+			top:2px;
+			width: 12px;
+		}
+	}
+	ul>ul{
+		margin: 1em 0 1.5em 1em ;
+		li:before{
+			content: url('../images/arrow/arrow-right2.svg');
+			position: absolute;
+			left: -1.3em;
+			top:2px;
+			width: 12px;
+		}
+	}
+	h4{
+		margin-bottom: 1em;
+		// text-align: center;
+	}
+
+
 }

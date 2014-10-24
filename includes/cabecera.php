@@ -10,8 +10,8 @@
 		   	  <p>servicios</p>
 		      <ul>
 		         <li><a href='pericial.php'>pericial</a></li>
-		         <li><a href='javascript:void(0)'>segunda opinión a distáncia</a></li>
-		         <li><a href='javascript:void(0)'>Medicina Clínica</a></li>
+		         <li><a href='sod.php'>segunda opinión a distáncia</a></li>
+		         <li><a href='med-clinica.php'>Medicina Clínica</a></li>
 		      </ul>
 		   </li>
 		   <li class="nosotros"><a href='javascript:void(0)'>nosotros</a></li>

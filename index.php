@@ -12,7 +12,7 @@
 
 
 <div class="fotoinicio">
-	<div class="textos">
+	<div class="textos animated fadeInUp">
 		<h1>Conectando medicina y justicia </h1>
 		<h2>“Aportamos soluciones Médico-Legales”</h2>
 	</div>
@@ -98,13 +98,23 @@
 		</a>
 	</article>
 	<article class="servicios-segunda">
-		<a href="javascript:void(0)">
+		<a href="sod.php">
 			<div class="serv-textos">
-				<h3 class="titular">segunda opinion a distáncia (SOD)</h3>
+				<h3 class="titular">segunda opinión a distáncia (SOD)</h3>
 				<p> Valoramos su documentación clínica y/o pericial
 					y le aconsejamos sobre aquello que le preocupe sin
 					desplazamientos, no importa donde se encuentre,
 					estamos a un click de distancia.  </p>
+			</div>
+		</a>
+	</article>
+	<article class="servicios-med-clinica">
+		<a href="med-clinica.php">
+			<div class="serv-textos">
+				<h3 class="titular">Medicina Interna</h3>
+				<p>  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip exea . </p>
 			</div>
 		</a>
 	</article>

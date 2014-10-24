@@ -217,6 +217,7 @@
 		padding:0 2em;
 		p{
 			font-style: italic;
+			@include font-size(18);
 		}
 		&:hover{
 			@include opacity();
@@ -228,7 +229,9 @@
 }
 .servicios-segunda{
 	background-image: url('../images/foto-segunda.jpg');
-
+}
+.servicios-med-clinica{
+	background-image: url('../images/foto-med-clinica.jpg');
 }
 
 .noticias-section{
